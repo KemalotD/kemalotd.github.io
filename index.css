@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto; /* Исправлена ошибка в свойстве padding */
+}
+
+.header {
+    width: 100%;
+    color: white;
+    padding: 20px;
+    background: #151c39;
+    box-sizing: border-box;
+}
+
+.menu-item {
+    list-style: none;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.banner-title,
+.banner-description {
+    text-align: center;
+    color: wheat;
+}
+
+.banner-title {
+    font-size: 48px;
+}
+
+.banner-section {
+    padding: 100px 0;
+    background: url(img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cards-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cards {
+    display: inline-block;
+    width: 24%; /* Изменена ширина карточек */
+    margin: 0 10px; /* Уменьшены отступы для карточек */
+    vertical-align: top; /* Выравнивание карточек по верхнему краю */
+}
+
+.card {
+    padding: 25px;
+    margin-top: 25px;
+    background: white;
+    box-shadow: 0px 2px 7px 2px #9c90ff;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.card-button {
+    text-decoration: none;
+    color: white;
+    display: inline-block; /* Распределение кнопки по ширине карточки */
+    background: #151c39;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: white; /* Цвет текста при наведении остаётся белым */
+}
+
+/* Добавлено новое правило для соответствия кнопок карточкам */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-text {
+    flex-grow: 1; /* Растяжение текста внутри карточки */
+}
+
+.footer {
+    background: url(img/footer-bg.jpg);
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.copyright {
+    color: white;
+}
+.card-link {
+    color: white;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: white;
+}
