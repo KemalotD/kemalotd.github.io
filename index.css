@@ -7,7 +7,7 @@
 .container {
     max-width: 1140px;
     padding: 0 15px;
-    padding: 0 auto;
+    margin: 0 auto; /* Исправлена ошибка в свойстве padding */
 }
 
 .header {
@@ -29,7 +29,8 @@
     font-weight: bold;
 }
 
-.banner-title, .banner-description {
+.banner-title,
+.banner-description {
     text-align: center;
     color: wheat;
 }
@@ -39,58 +40,73 @@
 }
 
 .banner-section {
-    padding: 100px 0px;
+    padding: 100px 0;
     background: url(img/banner-bg.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .cards-section {
-    padding: 50px 0px;
+    padding: 50px 0;
+    text-align: center;
 }
 
-.cards-title, .cards-description {
-    color: #151c39;
-    text-align: center;
+.cards {
+    display: inline-block;
+    width: 24%; /* Изменена ширина карточек */
+    margin: 0 10px; /* Уменьшены отступы для карточек */
+    vertical-align: top; /* Выравнивание карточек по верхнему краю */
 }
 
 .card {
     padding: 25px;
     margin-top: 25px;
-    width: 25%;
     background: white;
     box-shadow: 0px 2px 7px 2px #9c90ff;
+    box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
-.card-link {
+.card-button {
     text-decoration: none;
     color: white;
-}
-
-.card-button{
-    text-align: center;
+    display: inline-block; /* Распределение кнопки по ширине карточки */
     background: #151c39;
-    padding: 10px 70px;
+    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
 }
- 
-.card-title, .card-text {
-    margin-bottom: 10px;
+
+.card-button:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: white; /* Цвет текста при наведении остаётся белым */
 }
 
-.cards {
-    display: inline-block;
-    width: 25%;
-    margin: 0px 45px;
+/* Добавлено новое правило для соответствия кнопок карточкам */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-text {
+    flex-grow: 1; /* Растяжение текста внутри карточки */
 }
 
 .footer {
     background: url(img/footer-bg.jpg);
     background-size: cover;
-    padding: 100px 0px;
+    padding: 100px 0;
 }
 
 .copyright {
+    color: white;
+}
+.card-link {
+    color: white;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: none;
     color: white;
 }
